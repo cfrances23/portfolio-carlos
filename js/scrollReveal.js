@@ -1,11 +1,12 @@
-// Selecciona todas las secciones ocultas
-const hiddenSections = document.querySelectorAll('.hidden-section');
 
 // Delay inicial para staggered effect
 let revealDelay = 0;
 
 // Función de revelado con staggered + parallax suave
 const revealSections = () => {
+    // Selecciona todas las secciones ocultas
+    const hiddenSections = document.querySelectorAll('.hidden-section');
+
     hiddenSections.forEach((section, index) => {
         const sectionTop = section.getBoundingClientRect().top;
         const screenHeight = window.innerHeight;
@@ -20,6 +21,9 @@ const revealSections = () => {
 
 // Parallax suave
 const parallaxSections = () => {
+    // Selecciona todas las secciones ocultas
+    const hiddenSections = document.querySelectorAll('.hidden-section');
+
     hiddenSections.forEach(section => {
         const scrolled = window.scrollY;
         section.style.transform = `translateY(${50 - scrolled * 0.05}px)`; // ligera subida al hacer scroll
