@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #020617; 
+    background-color: #020617;
     color: white;
     overflow-x: hidden;
 }
@@ -68,10 +68,13 @@ body {
     margin: 0 auto;
     padding: 6rem 2rem 2rem;
 }
+
 .hero {
-    min-height: 100vh; /* ocupa toda la pantalla */
+    min-height: 100vh;
+    /* ocupa toda la pantalla */
     display: flex;
-    align-items: center; /* centra verticalmente */
+    align-items: center;
+    /* centra verticalmente */
 }
 
 .hero-text {
@@ -86,21 +89,30 @@ body {
 .hero-image {
     padding: 20px;
     margin-left: 15rem;
-    margin-bottom: 12rem;
+    margin-bottom: 2rem;
     border-radius: 30px;
     background: transparent
 }
 
 .hero-image img {
     border-radius: 60px;
-    border: 1,5px solid rgba(56, 189, 248, 0.6);
+    border: 1, 5px solid rgba(56, 189, 248, 0.6);
     box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
 }
 
 /* TEXTO */
 .hero-text {
-    flex: 1; /* ocupa más espacio que la imagen */
+    flex: 1;
     justify-content: center;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    margin-bottom: 0.25rem;
+}
+
+.hero-text p {
+    margin: 0.5rem 0;
 }
 
 /* EFECTO CRISTAL */
@@ -115,14 +127,29 @@ body {
     margin-bottom: 3rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     transition: all 0.8s ease;
-    
+
 }
 
 /* TIPOGRAFÍA */
-h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-h2 { color: #38bdf8; margin-top: 0; }
-.highlight { color: #38bdf8; } 
-.subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 1.5rem; }
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-top: 0;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
 
 /* BOTÓN MODERNO */
 .btn-cv {
@@ -140,6 +167,30 @@ h2 { color: #38bdf8; margin-top: 0; }
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
 }
+.skills-logos {
+  display: flex;
+  gap: 25px;
+}
+
+.logo-box {
+  background: #1f2937; /* gris azulado oscuro */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid #2d2d2d;
+}
+
+.logo-box img {
+  width: 80px;
+  height: auto;
+}
+
+/* Hover efecto pro */
+.logo-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
 
 /* PROYECTOS */
 .proyecto {
@@ -147,6 +198,31 @@ h2 { color: #38bdf8; margin-top: 0; }
     padding-left: 1rem;
     margin-top: 1rem;
     background: rgba(255, 255, 255, 0.02);
+}
+
+.proyecto {
+    border-left: 3px solid #38bdf8;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.certification {
+    border-left: 3px solid #38bdf8;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    text-align: left;
+}
+
+.certification-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.certification-logo img {
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
 }
 
 /* SCROLL SUAVE */
@@ -180,9 +256,11 @@ html {
         gap: 1rem;
     }
 }
+
 @media (max-width: 768px) {
     .hero-content {
-        flex-direction: column; /* se apila en móvil */
+        flex-direction: column;
+        /* se apila en móvil */
         text-align: center;
     }
 
