@@ -89,7 +89,7 @@ body {
 .hero-image {
     padding: 20px;
     margin-left: 15rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20rem;
     border-radius: 30px;
     background: transparent
 }
@@ -102,6 +102,7 @@ body {
 
 /* TEXTO */
 .hero-text {
+    margin-bottom: 20rem;
     flex: 1;
     justify-content: center;
     gap: 2rem;
@@ -114,7 +115,97 @@ body {
 .hero-text p {
     margin: 0.5rem 0;
 }
+/* CONTENEDOR */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
 
+/* ICONOS */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+/* IMAGEN ICONO */
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* HOVER 🔥 */
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+/* BASE ICONO */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 ESTILO BLANCO */
+.social-white {
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ICONO */
+.social-white img {
+    width: 20px;
+    height: 20px;
+}
+
+/* HOVER */
+.social-white:hover {
+    transform: translateY(-3px) scale(1.1);
+    border-color: #38bdf8;
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+/* CONTENEDOR */
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* CADA STAT */
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+/* NÚMERO GRANDE */
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* TEXTO */
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
 /* EFECTO CRISTAL */
 .card-glass {
     background: rgba(255, 255, 255, 0.03);
@@ -122,7 +213,6 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    min-height: 70vh;
     padding: 3rem;
     margin-bottom: 3rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
@@ -191,7 +281,47 @@ h2 {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
 
+/* línea vertical */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(56, 189, 248, 0.4);
+}
+
+/* cada item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* punto */
+.timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+/* contenido */
+.timeline-content {
+    margin-left: 2rem;
+    padding: 1.5rem;
+}
 /* PROYECTOS */
 .proyecto {
     border-left: 3px solid #38bdf8;
@@ -223,6 +353,28 @@ h2 {
     width: 10%;
     height: 10%;
     object-fit: contain;
+}
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover efecto */
+.card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+/* hint abajo */
+.cert-link-hint {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #38bdf8;
+    opacity: 0.8;
 }
 
 /* SCROLL SUAVE */
@@ -268,4 +420,59 @@ html {
         width: 180px;
         height: 180px;
     }
+}
+/* TEXTO INTRO */
+.contact-intro {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* CONTENEDOR */
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* TARJETA */
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.2rem 1.5rem;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    text-decoration: none;
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER (clave UX 🔥) */
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+/* ICONO */
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+/* TEXTO */
+.contact-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-info {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
 }
